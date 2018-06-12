@@ -1,4 +1,8 @@
 package org.jvm;
+/*
+ * 将java.lang.System替换为我们自己定义的HackSystem类的过程，它直接修改符合Class文件格式的byte[]数组中的常量池部分，将常量池中指定内容的CONSTANT_Utf8_info常量替换为新的字符串，具体代码如下面的代码所示。ClassModifier中涉及对byte[]数组操作的部分，主要是将byte[]与int和String互相转换，以及把对byte[]数据的替换操作封装在TyteUtils中。
+ * */
+
 
 /**
  * 修改class文件，暂时只提供修改常量池的功能
